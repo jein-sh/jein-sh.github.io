@@ -1,0 +1,13 @@
+.scills__list {
+  list-style-type: '-';
+  column-count: 4;
+
+  @include vp-1199 {
+    column-count: 2;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    column-count: 1;
+  }
+}
