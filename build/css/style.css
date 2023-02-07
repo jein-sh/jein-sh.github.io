@@ -548,6 +548,11 @@ button,
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
   overflow: hidden;
+  background-color: #231320ef;
+  background-image: url("../img/content/background.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
 }
 
 .wrapper .header,
@@ -564,10 +569,8 @@ button,
 
 .rouble {
   font-family: "Rouble", "Arial", sans-serif;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
+  text-transform: lowercase;
+  font-weight: 400;
 }
 
 .visually-hidden {
@@ -602,23 +605,11 @@ button,
   display: none;
 }
 
-.no-transition {
-  /* stylelint-disable-next-line */
-  -webkit-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
-}
-
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
-  background-color: #231320ef;
-  background-image: url("../img/content/background.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: cover;
 }
 
 .promo h1 {
@@ -642,6 +633,9 @@ button,
   background-position: left;
   padding-top: 10px;
   padding-bottom: 10px;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .header a:hover {
@@ -664,8 +658,8 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   list-style: none;
   margin: 0;
@@ -681,15 +675,20 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 30px;
-  width: 240px;
   border: 2px solid #ffffff;
   border-radius: 10px;
-  background-color: rgba(197, 179, 179, 0.3);
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: box-shadow 0.3s ease, opacity 0.3s ease;
+  transition: box-shadow 0.3s ease, opacity 0.3s ease;
+  transition: box-shadow 0.3s ease, opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 
 .projects__item:hover {
   -webkit-box-shadow: 3px 3px 5px #ffffff;
   box-shadow: 3px 3px 5px #ffffff;
+  opacity: 0.8;
 }
 
 .projects__item h3 {
@@ -719,6 +718,9 @@ button,
   background-position: left;
   padding-top: 10px;
   padding-bottom: 10px;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .footer a:hover {

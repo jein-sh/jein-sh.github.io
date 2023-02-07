@@ -8,6 +8,12 @@
   min-height: calc(100 * var(--vh, 1vh));
   overflow: hidden;
 
+  background-color: #231320ef;
+  background-image: url('../img/content/background.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+
   .header,
   .footer {
     flex-shrink: 0;
@@ -20,10 +26,8 @@
 
 .rouble {
   font-family: $ff-rouble;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
+  text-transform: lowercase;
+  font-weight: 400;
 }
 
 .visually-hidden {
@@ -60,9 +64,4 @@
   &::-webkit-scrollbar {
     display: none;
   }
-}
-
-.no-transition {
-  /* stylelint-disable-next-line */
-  transition: none !important;
 }

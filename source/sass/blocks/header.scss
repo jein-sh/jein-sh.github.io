@@ -15,6 +15,7 @@
   background-position: left;
   padding-top: 10px;
   padding-bottom: 10px;
+  transition: opacity 0.3s ease;
 
   &:hover {
     opacity: 0.5;
