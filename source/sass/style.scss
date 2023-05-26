@@ -4,7 +4,7 @@
 @import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
-
+@import "vendor/locomotive-scroll";
 // Global
 // ---------------------------------
 
@@ -19,8 +19,13 @@
 // ---------------------------------
 
 @import "blocks/promo";
+@import "blocks/about";
 @import "blocks/header";
 @import "blocks/projects";
-@import "blocks/footer";
+// @import "blocks/footer";
 @import "blocks/scills";
+@import "blocks/contacts";
+@import "blocks/img-block";
+@import "blocks/button";
+@import "blocks/separator";
 

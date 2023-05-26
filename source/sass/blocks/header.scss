@@ -1,4 +1,7 @@
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: flex-end;
   margin: 15px 20px;
@@ -6,28 +9,32 @@
   @include vp-767 {
     flex-direction: column;
   }
-}
 
-.header a {
-  margin-right: 50px;
-  text-decoration: none;
-  background-repeat: no-repeat;
-  background-position: left;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  transition: opacity 0.3s ease;
-
-  &:hover {
-    opacity: 0.5;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
   }
+
+  li:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  a {
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+
 }
 
-.header__email {
-  padding-left: 30px;
-  background-image: url("../img/icon-email-header.svg");
-}
 
-.header__phone {
-  padding-left: 25px;
-  background-image: url("../img/icon-phone-header.svg");
-}

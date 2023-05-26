@@ -1,43 +1,88 @@
-.projects__list {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.projects {
+  margin: 10rem 0;
 
-  @include vp-1199 {
-    grid-template-columns: 1fr 1fr;
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  @include vp-767 {
-    grid-template-columns: 1fr;
+  &__item {
+    display: flex;
+    align-items: center;
+
+    .img-block {
+      margin-right: 2rem;
+    }
+
+    .img-block::after,
+    .img-block::before {
+      border-radius: 1rem;
+      // transform: rotate(-90deg) translateY(10rem);
+      // transform-origin: bottom left;
+    }
+
+    &:nth-child(2n+2) {
+      flex-direction: row-reverse;
+
+      .img-block {
+        margin-right: 0;
+        margin-left: 2rem;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 7rem;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .img-block {
+        margin-right: 0;
+      }
+
+      &:nth-child(2n+2) {
+        flex-direction: column;
+
+        .img-block {
+          margin-left: 0;
+        }
+      }
+    }
   }
-}
 
-.projects__item {
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  border: 2px solid $color-default-white;
-  border-radius: 10px;
-  // background-color: $color-gray;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease, opacity 0.3s ease;
+  &__img {
+    border-radius: 1rem;
+    flex: 1;
+    overflow: hidden;
 
-  &:hover {
-    box-shadow: 3px 3px 5px $color-default-white;
-    opacity: 0.8;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
-}
 
-.projects__item h3 {
-  min-height: 50px;
-  margin: 0 0 15px;
-  text-align: center;
-}
+  &__info {
+    flex: 1;
+    margin: 0 2rem;
 
-.projects__item p {
-  margin: 10px 0 0;
+    @include vp-1199 {
+      flex: 2;
+    }
+
+    @include vp-767 {
+      margin: 0;
+    }
+  }
+
+  .button:not(:last-child) {
+    margin-right: 1rem;
+
+    @include vp-767 {
+      margin-right: 0.5rem;
+    }
+  }
 }

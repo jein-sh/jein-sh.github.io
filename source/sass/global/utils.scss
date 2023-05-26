@@ -7,12 +7,12 @@
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
   overflow: hidden;
-
-  background-color: #231320ef;
-  background-image: url('../img/content/background.jpg');
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: cover;
+  background: rgb(2,0,36);
+  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 79%, rgba(0,74,175,1) 100%);
+  // background-image: url('../img/content/background.jpg');
+  // background-repeat: no-repeat;
+  // background-position: 0 0;
+  // background-size: cover;
 
   .header,
   .footer {
@@ -22,12 +22,6 @@
   main {
     flex-grow: 1;
   }
-}
-
-.rouble {
-  font-family: $ff-rouble;
-  text-transform: lowercase;
-  font-weight: 400;
 }
 
 .visually-hidden {

@@ -1,0 +1,49 @@
+.img-block {
+  position: relative;
+  border-radius: 3rem;
+  flex: 1;
+
+  &::after {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    border: 3px solid rgba($color-default-white, 0.5);
+    z-index: -1;
+    transition: transform 0.4s ease;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    border: 3px solid rgba($color-default-white, 0.3);
+    z-index: -1;
+    transition: transform 0.4s ease 0.2s;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+
+
+
+  &.is-inview::after {
+    transform: rotate(7deg);
+  }
+
+  &.is-inview::before {
+    transform: rotate(-10deg);
+  }
+}
