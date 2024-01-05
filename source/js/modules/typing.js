@@ -1,8 +1,8 @@
 export default () => {
 
-  const text = "<I'm a Junior Frontend-developer>";
+  const text = "<I'm a Frontend-developer>";
   const delay = 100;
-  const elem = document.querySelector(".js-type");
+  const elem = document.querySelector('.js-type');
 
   const typingText = function(text, elem, delay) {
     if(text.length > 0) {

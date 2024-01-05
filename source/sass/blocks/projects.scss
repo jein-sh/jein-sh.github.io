@@ -1,6 +1,10 @@
 .projects {
   margin: 10rem 0;
 
+  @include vp-767 {
+    margin: 3rem 0;
+  }
+
   &__list {
     list-style: none;
     margin: 0;
@@ -18,8 +22,6 @@
     .img-block::after,
     .img-block::before {
       border-radius: 1rem;
-      // transform: rotate(-90deg) translateY(10rem);
-      // transform-origin: bottom left;
     }
 
     &:nth-child(2n+2) {
@@ -33,6 +35,10 @@
 
     &:not(:last-child) {
       margin-bottom: 7rem;
+
+      @include vp-767 {
+        margin-bottom: 2rem;
+      }
     }
 
     @include vp-767 {
@@ -83,6 +89,16 @@
 
     @include vp-767 {
       margin-right: 0.5rem;
+    }
+  }
+
+  &__links {
+    @include vp-767 {
+      display: flex;
+
+      a {
+        flex: 1;
+      }
     }
   }
 }

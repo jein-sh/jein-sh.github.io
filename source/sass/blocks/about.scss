@@ -1,8 +1,18 @@
 .about {
   position: relative;
-  display: flex;
   min-height: 100vh;
+  display: flex;
   align-items: center;
+  padding: 20px 0 60px;
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    @include vp-767 {
+      flex-direction: column-reverse;
+    }
+  }
 
   @include vp-1199 {
     flex-direction: column;
@@ -13,7 +23,7 @@
 
   &__img {
     width: 25rem;
-    height: 15rem;
+    height: 25rem;
     border-radius: 3rem;
     overflow: hidden;
     align-self: center;
@@ -27,23 +37,44 @@
     }
 
     @include vp-1199 {
-      display: none;
+      width: 20rem;
+    }
+
+    @include vp-767 {
+      margin-bottom: 50px;
+      width: 100%;
+      height: 100%;
     }
   }
 
   &__info {
-    margin-left: 5rem;
+    margin-right: 5rem;
+
+    p {
+      margin: 0;
+      line-height: 1.5rem;
+    }
 
     @include vp-1199 {
+      margin-right: 3rem;
+    }
+
+    @include vp-767 {
       margin: 0 0 2rem;
     }
   }
 
   &__link {
-    position: absolute;
-    bottom: 2rem;
-    right: 0;
+    display: inline-block;
     text-decoration: none;
     color: inherit;
+    font-size: 1.5em;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-green;
+    }
   }
 }
